@@ -18,7 +18,7 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <argument
-            android:name="dogId"
+            android:name="plantId"
             app:argType="string" />
     </fragment>
 
@@ -27,6 +27,9 @@
         android:name="com.salam.getchip.fragments.DogDetailsFragment"
         android:label="Dogs Details"
         tools:layout="@layout/fragment_dog_details">
+        <argument
+            android:name="dogName"
+            app:argType="string" />
     </fragment>
 
 
