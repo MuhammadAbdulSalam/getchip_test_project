@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".application.Application"
         android:theme="@style/Theme.GetchipTest">
 
         <activity android:name=".splashscreen.SplashActivity"
@@ -18,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.Getchip"/>
     </application>
 
 </manifest>
