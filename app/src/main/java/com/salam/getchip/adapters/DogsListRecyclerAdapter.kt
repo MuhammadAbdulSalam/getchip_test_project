@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.salam.getchip.data.DogNames
 import com.salam.getchip.databinding.ListItemDogsListNameBinding
-import com.salam.getchip.fragments.DogViewPagerFragmentDirections
+import com.salam.getchip.fragments.DogsListViewFragment
+import com.salam.getchip.fragments.DogsListViewFragmentDirections
 
 class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(DogDiffCallback()) {
 
@@ -44,7 +45,7 @@ class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(Do
             view: View
         ) {
             val direction =
-                DogViewPagerFragmentDirections.actionDogViewPagerToDogDetailFragment(
+                DogsListViewFragmentDirections.actionDogListFragmentToDogDetailFragment(
                     dogName.name
                 )
             view.findNavController().navigate(direction)

@@ -17,4 +17,10 @@
     <color name="getchip_white">#deffffff</color>
     <color name="getchip_yellow_300">#f8f99f</color>
     <color name="getchip_yellow_500">#ffff63</color>
+
+    <color name="getchip_primary_color">#FFC107</color>
+    <color name="getchip_primary_dark">#FF9800</color>
+    <color name="getchip_accent">#8BC34A</color>
+    <color name="colorSecondary">#FFC107</color>
+    <color name="getchip_card_name_color">#CDDC39</color>
 </resources>
