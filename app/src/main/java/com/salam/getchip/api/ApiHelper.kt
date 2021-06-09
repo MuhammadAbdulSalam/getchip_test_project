@@ -1,8 +1,10 @@
 package com.salam.getchip.api
 
 import javax.inject.Inject
+import javax.inject.Singleton
 
-class ApiHelper(private val apiService: RetrofitBuilder, private val breedName: String) {
+@Singleton
+class ApiHelper @Inject constructor(private val apiService: RetrofitBuilder) {
     suspend fun getDogsList() = apiService.getDogsList()
-    suspend fun getDogImagesUrl() = apiService.getDogsUrl(breedName)
+    suspend fun getDogImagesUrl(br: String) = apiService.getDogsUrl(br)
 }

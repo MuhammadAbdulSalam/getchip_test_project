@@ -1,7 +1,6 @@
 package com.salam.getchip.application
 
 import android.app.Application
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
 import kotlin.system.exitProcess
 

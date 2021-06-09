@@ -2,15 +2,16 @@ package com.salam.getchip.api
 
 import com.salam.getchip.data.DogListResponse
 import com.salam.getchip.data.DogsImageUrlsResponse
-import dagger.Subcomponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
+import javax.inject.Inject
+import javax.inject.Singleton
 
-interface RetrofitBuilder {
+interface RetrofitBuilder{
 
     @GET("breeds/list/all")
     suspend fun getDogsList(): DogListResponse

@@ -8,7 +8,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
-class DogsListViewModel constructor(private val mainRepository: DogsListRepository): ViewModel() {
+@HiltViewModel
+class DogsListViewModel @Inject constructor(
+    private val mainRepository: DogsListRepository
+) : ViewModel() {
+
     fun getDogsList() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
@@ -18,10 +22,10 @@ class DogsListViewModel constructor(private val mainRepository: DogsListReposito
         }
     }
 
-    fun getDogImageUrls() =liveData(Dispatchers.IO) {
+    fun getDogImageUrls(breedName: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = mainRepository.getDogImagesUrl()))
+            emit(Resource.success(data = mainRepository.getDogImagesUrl(breedName)))
         } catch (exception: Exception) {
             emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
         }

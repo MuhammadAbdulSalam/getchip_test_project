@@ -1,15 +1,10 @@
 package com.salam.getchip.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.salam.getchip.data.DogImagesUrl
 import com.salam.getchip.databinding.ListViewDogsImageBinding
 
@@ -37,7 +32,7 @@ class DogsGallaryRecyclerAdapter :
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
-                binding.dogPhoto?.let { dogName ->
+                binding.dogPhoto.let { dogName ->
 
                 }
             }

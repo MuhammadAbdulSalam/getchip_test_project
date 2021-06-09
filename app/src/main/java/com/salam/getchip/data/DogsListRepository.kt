@@ -1,12 +1,12 @@
 package com.salam.getchip.data
 
-import android.net.Uri
-import android.util.Log
 import com.salam.getchip.api.ApiHelper
-import com.salam.getchip.api.RetrofitBuilder
 import javax.inject.Inject
+import javax.inject.Singleton
 
-class DogsListRepository(private val apiHelper: ApiHelper)  {
+@Singleton
+class DogsListRepository @Inject constructor(private val apiHelper: ApiHelper)  {
+
     suspend fun getDogsStringList(): List<DogNames>{
         val list = arrayListOf<DogNames>()
         apiHelper.getDogsList().message.keySet().iterator().forEach {
@@ -16,9 +16,9 @@ class DogsListRepository(private val apiHelper: ApiHelper)  {
         return list
     }
 
-    suspend fun getDogImagesUrl(): List<DogImagesUrl>{
+    suspend fun getDogImagesUrl(breedName: String): List<DogImagesUrl>{
         val list = arrayListOf<DogImagesUrl>()
-        apiHelper.getDogImagesUrl().message.iterator().forEach {
+        apiHelper.getDogImagesUrl(breedName).message.iterator().forEach {
             val dogUrl = DogImagesUrl(it.asString)
             list.add(dogUrl)
         }
