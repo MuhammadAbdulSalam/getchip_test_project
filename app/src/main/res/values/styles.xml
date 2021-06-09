@@ -9,7 +9,7 @@
         <item name="colorAccent">@color/getchip_green_700</item>
         <item name="colorSurface">@color/getchip_gray_50</item>
         <item name="colorSecondary">@color/getchip_yellow_500</item>
-        <item name="android:colorBackground">@color/getchip_green_500</item>
+        <item name="android:colorBackground">@color/white</item>
     </style>
 r
     <style name="SplashScreenTheme" parent = "Theme.AppCompat.NoActionBar">

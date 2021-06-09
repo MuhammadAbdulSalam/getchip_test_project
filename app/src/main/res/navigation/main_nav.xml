@@ -18,7 +18,7 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <argument
-            android:name="plantId"
+            android:name="dogName"
             app:argType="string" />
     </fragment>
 

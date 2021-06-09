@@ -44,7 +44,7 @@ class DogListFragment : Fragment() {
     private fun setupViewModel() {
         viewModel = ViewModelProviders.of(
             this,
-            DogsViewModelFactory(ApiHelper(RetrofitBuilder.create()))
+            DogsViewModelFactory(ApiHelper(RetrofitBuilder.create(), breedName = ""))
         ).get(DogsListViewModel::class.java)
     }
 
