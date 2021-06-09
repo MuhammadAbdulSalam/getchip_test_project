@@ -3,14 +3,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
         <variable
             name="clickListener"
-            type="android.view.View.OnClickListener"/>
+            type="android.view.View.OnClickListener" />
         <variable
             name="model"
-            type="com.salam.getchip.data.DogImagesUrl"/>
+            type="com.salam.getchip.data.DogImagesUrl" />
     </data>
 
     <LinearLayout
@@ -19,11 +18,10 @@
         android:onClick="@{clickListener}"
         android:orientation="vertical"
         app:cardPreventCornerOverlap="false">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            android:padding="5dp">
             <ImageView
                 android:id="@+id/dog_photo"
                 android:layout_width="0dp"
@@ -33,9 +31,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
-
 </layout>

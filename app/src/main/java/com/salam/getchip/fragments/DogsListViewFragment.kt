@@ -13,6 +13,12 @@ import com.salam.getchip.databinding.FragmentDogListViewBinding
 import com.salam.getchip.viewmodels.DogsListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * @author Muhammad Abdul Salam
+ * Dogs Listview fragment, To show a list of dog breeds available
+ * User can navigate to next screens
+ */
+
 @AndroidEntryPoint
 class DogsListViewFragment : Fragment() {
     private val viewModel: DogsListViewModel by viewModels()
@@ -20,15 +26,12 @@ class DogsListViewFragment : Fragment() {
     private var currentCount = 0
     private lateinit var binding: FragmentDogListViewBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
         binding = FragmentDogListViewBinding.inflate(inflater, container, false)
-
         context ?: return binding.root
         binding.dogsList.adapter = adapter
+
         binding.moveToTop.setOnClickListener {
             if (currentCount > 0) binding.dogsList.smoothScrollToPosition(0)
         }
@@ -40,7 +43,6 @@ class DogsListViewFragment : Fragment() {
             if (currentCount > 0) binding.dogsList.smoothScrollToPosition(0)
         }
         setupObservers()
-
         return binding.root
     }
 
@@ -81,7 +83,7 @@ class DogsListViewFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
-    fun updateUI(recycler: Int, progressbar: Int, errorMessage: Int) {
+    private fun updateUI(recycler: Int, progressbar: Int, errorMessage: Int) {
         binding.dogsList.visibility = recycler
         binding.listViewProgress.visibility = progressbar
         binding.tvErrorMessage.visibility = errorMessage

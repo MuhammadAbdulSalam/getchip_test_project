@@ -11,7 +11,9 @@ import com.salam.getchip.MainActivity
 import com.salam.getchip.R
 
 /**
- * author: Muhammad Abdul Salam
+ * @author: Muhammad Abdul Salam
+ * Shiba Inu to start app with
+ * For Good Luck
  */
 
 class SplashActivity : AppCompatActivity() {

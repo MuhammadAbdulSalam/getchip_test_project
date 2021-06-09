@@ -8,32 +8,35 @@ import androidx.recyclerview.widget.RecyclerView
 import com.salam.getchip.data.DogImagesUrl
 import com.salam.getchip.databinding.ListViewDogsImageBinding
 
+/**
+ * @author Muhammad Abdul Salam
+ */
 
-class DogsGallaryRecyclerAdapter :
+class DogsGalleryRecyclerAdapter :
     ListAdapter<DogImagesUrl, RecyclerView.ViewHolder>(ImageDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return DogGallaryViewHolder(
+        return DogGalleryViewHolder(
             ListViewDogsImageBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
-                false
+                false/**/
             )
         )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val dog = getItem(position)
-        (holder as DogGallaryViewHolder).bind(dog)
+        (holder as DogGalleryViewHolder).bind(dog)
     }
 
-    class DogGallaryViewHolder(
+    class DogGalleryViewHolder(
         private val binding: ListViewDogsImageBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
-                binding.dogPhoto.let { dogName ->
-
+                binding.dogPhoto.let {
+                    //TODO next step to either show or full screen etc
                 }
             }
         }

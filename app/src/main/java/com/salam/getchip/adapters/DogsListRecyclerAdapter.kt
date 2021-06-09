@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.salam.getchip.data.DogNames
 import com.salam.getchip.databinding.ListItemDogsListNameBinding
-import com.salam.getchip.fragments.DogsListViewFragment
 import com.salam.getchip.fragments.DogsListViewFragmentDirections
+/**
+ * @author Muhammad Abdul Salam
+ */
 
 class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(DogDiffCallback()) {
 
@@ -29,9 +31,8 @@ class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(Do
         (holder as DogNameViewHolder).bind(dog)
     }
 
-    class DogNameViewHolder(
-        private val binding: ListItemDogsListNameBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
+    class DogNameViewHolder(private val binding: ListItemDogsListNameBinding) : RecyclerView.ViewHolder(binding.root) {
+
         init {
             binding.setClickListener {
                 binding.dog?.let { dogName ->
@@ -44,10 +45,8 @@ class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(Do
             dogName: DogNames,
             view: View
         ) {
-            val direction =
-                DogsListViewFragmentDirections.actionDogListFragmentToDogDetailFragment(
-                    dogName.name
-                )
+            val direction = DogsListViewFragmentDirections.actionDogListFragmentToDogDetailFragment(
+                    dogName.name)
             view.findNavController().navigate(direction)
         }
 
@@ -61,7 +60,6 @@ class DogsListRecyclerAdapter: ListAdapter<DogNames, RecyclerView.ViewHolder>(Do
 }
 
 private class DogDiffCallback : DiffUtil.ItemCallback<DogNames>() {
-
     override fun areItemsTheSame(oldItem: DogNames, newItem: DogNames): Boolean {
         return oldItem.name == newItem.name
     }

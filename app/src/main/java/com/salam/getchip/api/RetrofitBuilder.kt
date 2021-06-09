@@ -10,23 +10,22 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import javax.inject.Inject
 import javax.inject.Singleton
+/**
+ * @author Muhammad Abdul Salam
+ */
 
-interface RetrofitBuilder{
+interface RetrofitBuilder {
 
     @GET("breeds/list/all")
     suspend fun getDogsList(): DogListResponse
 
     @GET("breed/{breed_name}/images")
-    suspend fun getDogsUrl(
-        @Path("breed_name") name: String
-    ): DogsImageUrlsResponse
+    suspend fun getDogsUrl(@Path("breed_name") name: String): DogsImageUrlsResponse
 
-
-    companion object{
+    companion object {
         private const val BASE_URL = "https://dog.ceo/api/"
-        val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
-
-        val client = OkHttpClient.Builder()
+        private val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
+        private val client = OkHttpClient.Builder()
             .addInterceptor(logger)
             .build()
 
@@ -35,9 +34,8 @@ interface RetrofitBuilder{
                 .baseUrl(BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
-                .build() //Doesn't require the adapter
+                .build()
                 .create(RetrofitBuilder::class.java)
         }
     }
-
 }

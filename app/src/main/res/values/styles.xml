@@ -3,11 +3,11 @@
     <!-- To see how these attributes are used, please visit https://material.io/develop/android/theming/color/ -->
     <style name="Base.Theme.Getchip" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/getchip_primary_color</item>
-        <item name="colorOnPrimary">@color/getchip_yellow_500</item>
+        <item name="colorOnPrimary">@color/getchip_primary_dark</item>
         <item name="colorPrimaryDark">@color/getchip_primary_dark</item>
         <item name="colorOnSurface">@color/getchip_black</item>
         <item name="colorAccent">@color/getchip_accent</item>
-        <item name="colorSurface">@color/getchip_gray_50</item>
+        <item name="colorSurface">@color/getchip_primary_dark</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="android:colorBackground">@color/white</item>
     </style>

@@ -21,6 +21,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+/**
+ * @author Muhammad Abdul Salam
+ */
 
 @InstallIn(SingletonComponent::class)
 @Module
@@ -28,7 +31,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideUnsplashService(): RetrofitBuilder {
+    fun provideRetrofitService(): RetrofitBuilder {
         return RetrofitBuilder.create()
     }
 }

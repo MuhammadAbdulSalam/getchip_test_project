@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
@@ -15,21 +15,22 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
         <ProgressBar
             android:id="@+id/list_view_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/tv_error_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Something went wrong, Please Retry!!"
             android:layout_gravity="center"
-            android:visibility="gone"/>
+            android:text="Something went wrong, Please Retry!!"
+            android:visibility="gone" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
@@ -64,37 +65,36 @@
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-            <!-- Override tabIconTint attribute of style with selector -->
             <LinearLayout
                 android:id="@+id/tabs"
-                android:orientation="horizontal"
                 style="@style/Widget.MaterialComponents.TabLayout.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/bar_border_backgroumd"
                 android:gravity="center_vertical"
-                android:weightSum="3"
-                android:background="@drawable/bar_border_backgroumd">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <ImageView
                     android:id="@+id/move_to_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_round_arrow_circle_up_24"/>
+                    android:src="@drawable/ic_round_arrow_circle_up_24" />
 
                 <ImageView
                     android:id="@+id/move_to_end"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+                    android:src="@drawable/ic_baseline_arrow_circle_down_24" />
 
                 <ImageView
                     android:id="@+id/refresh_page"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_baseline_loop_24"/>
+                    android:src="@drawable/ic_baseline_loop_24" />
 
             </LinearLayout>
 

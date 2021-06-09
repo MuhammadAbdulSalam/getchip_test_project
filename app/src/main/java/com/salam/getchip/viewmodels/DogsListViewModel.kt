@@ -8,6 +8,12 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
+/**
+ * @author Muhammad Abdul Salam
+ * We do not need seperate models since its a very small and basic app
+ * One View Models will do the work just fine
+ */
+
 @HiltViewModel
 class DogsListViewModel @Inject constructor(
     private val mainRepository: DogsListRepository
