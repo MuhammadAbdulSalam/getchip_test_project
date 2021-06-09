@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/dogs_list_fragment">
+
+    <fragment
+        android:id="@+id/dogs_list_fragment"
+        android:name="com.salam.getchip.fragments.DogsListViewFragment"
+        tools:layout="@layout/fragment_dog_list_view">
+
+        <action
+            android:id="@+id/action_dog_list_fragment_to_dog_detail_fragment"
+            app:destination="@id/dog_details_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dog_details_fragment"
+        android:name="com.salam.getchip.fragments.DogDetailsFragment"
+        android:label="Dogs Details"
+        tools:layout="@layout/fragment_dog_details">
+        <argument
+            android:name="dogName"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

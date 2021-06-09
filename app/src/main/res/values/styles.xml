@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- To see how these attributes are used, please visit https://material.io/develop/android/theming/color/ -->
+    <style name="Base.Theme.Getchip" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/getchip_primary_color</item>
+        <item name="colorOnPrimary">@color/getchip_primary_dark</item>
+        <item name="colorPrimaryDark">@color/getchip_primary_dark</item>
+        <item name="colorOnSurface">@color/getchip_black</item>
+        <item name="colorAccent">@color/getchip_accent</item>
+        <item name="colorSurface">@color/getchip_primary_dark</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+r
+    <style name="SplashScreenTheme" parent = "Theme.AppCompat.NoActionBar">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="Theme.Getchip" parent="Base.Theme.Getchip"/>
+    <style name="Theme.Getchip.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+</resources>
