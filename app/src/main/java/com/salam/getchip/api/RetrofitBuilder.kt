@@ -8,8 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-import javax.inject.Inject
-import javax.inject.Singleton
+
 /**
  * @author Muhammad Abdul Salam
  */

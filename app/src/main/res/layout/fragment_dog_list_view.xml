@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Something went wrong, Please Retry!!"
+            android:text="@string/ERROR_MESSAGE"
             android:visibility="gone" />
 
         <com.google.android.material.appbar.AppBarLayout
@@ -80,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="@string/UP_LOGO"
                     android:src="@drawable/ic_round_arrow_circle_up_24" />
 
                 <ImageView
@@ -87,6 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="@string/DOWN_LOGO"
                     android:src="@drawable/ic_baseline_arrow_circle_down_24" />
 
                 <ImageView
@@ -94,6 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:contentDescription="@string/REFRESH_PAGE"
                     android:src="@drawable/ic_baseline_loop_24" />
 
             </LinearLayout>

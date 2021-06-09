@@ -21,20 +21,8 @@ r
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowDrawsSystemBarBackgrounds">false</item>
         <item name="android:background">@color/white</item>
-
     </style>
-
     <style name="Theme.Getchip" parent="Base.Theme.Getchip"/>
-
-    <style name="Theme.Getchip.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
     <style name="Theme.Getchip.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
-
-    <style name="TextAppearance.Getchip.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5" >
-        <item name="android:textColor">?attr/colorOnSurface</item>
-    </style>
 
 </resources>

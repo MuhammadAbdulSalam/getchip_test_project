@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">GetchipTest</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="DOG_LOGO_IMAGE">Dog Logo</string>
+    <string name="LOGO_TEXT">Logo text</string>
+    <string name="UP_LOGO">up button</string>
+    <string name="DOWN_LOGO">down logo</string>
+    <string name="REFRESH_PAGE">refresh page logo</string>
+    <string name="PAW_LOGO">paw logo for card</string>
+    <string name="GALLERY_DOG_IMAGE">dog images loaded here</string>
+    <string name="SPLASH_INFO">No animals were harmed in this project, Woof Approved.</string>
+    <string name="ERROR_MESSAGE">Something went wrong, Please Retry!!</string>
 </resources>
